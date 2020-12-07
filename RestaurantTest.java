@@ -45,12 +45,25 @@ class RestaurantTest {
   //>>>>>>>>>>>>>>>>>>>>>>>>>TOTAL ORDER VALUE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     
     @Test
+    public void find_total_order_value_when_menu_item_selected_more_than_equal_to_0()
+    {
+    	 restaurant.addToMenu("Sweet corn soup",100);
+         restaurant.addToMenu("Vegetable lasagne", 200);
+         restaurant.addToMenu("Soup", 50);
+         restaurant.addToOrder(new int[] {});
+         Restaurant spyRestaurant = Mockito.spy(restaurant);
+    	 assertEquals(0, spyRestaurant.totalOrderValue());
+    }
+    
+    @Test
     public void find_total_order_value_when_menu_item_selected_more_than_equal_to_1()
     {
     	 restaurant.addToMenu("Sweet corn soup",100);
          restaurant.addToMenu("Vegetable lasagne", 200);
+         restaurant.addToMenu("Soup", 50);
+         restaurant.addToOrder(new int[] {1,2});
          Restaurant spyRestaurant = Mockito.spy(restaurant);
-    	 assertEquals(300, spyRestaurant.totalOrderValue(restaurant.getMenu()));
+    	 assertEquals(250, spyRestaurant.totalOrderValue());
     }
 
   //>>>>>>>>>>>>>>>>>>>>>>>>>TOTAL ORDER VALUE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
