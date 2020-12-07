@@ -44,15 +44,14 @@ class RestaurantTest {
     
   //>>>>>>>>>>>>>>>>>>>>>>>>>TOTAL ORDER VALUE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     
-/*    @Test
+    @Test
     public void find_total_order_value_when_menu_item_selected_more_than_equal_to_1()
     {
-    	 restaurant.addToMenu("Sweet corn soup",119);
-         restaurant.addToMenu("Vegetable lasagne", 269);
+    	 restaurant.addToMenu("Sweet corn soup",100);
+         restaurant.addToMenu("Vegetable lasagne", 200);
          Restaurant spyRestaurant = Mockito.spy(restaurant);
-     
-    	 assertEquals(100, spyRestaurant.totalOrderValue(restaurant.getMenu()));
-    }*/
+    	 assertEquals(300, spyRestaurant.totalOrderValue(restaurant.getMenu()));
+    }
 
   //>>>>>>>>>>>>>>>>>>>>>>>>>TOTAL ORDER VALUE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     
